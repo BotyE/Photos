@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express();
-const port = 80;
+const port = 8000;
 app.use(express.static('files'))
 app.use(function (req,res,next) {
     res.setHeader('Access-Control-Allow-Origin', '*');
