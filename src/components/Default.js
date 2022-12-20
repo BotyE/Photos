@@ -7,7 +7,7 @@ export const Default = ({collection, aCollection}) => {
             {collection.map((obj, index) => (
                 
               <div key={index}>
-              <Images images={`http://egorkulik.com:8000/${aCollection}/${obj}`} ></Images>
+              <Images images={`http://egorkulik.com/${aCollection}/${obj}`} ></Images>
           </div>
           ))}
         </div>

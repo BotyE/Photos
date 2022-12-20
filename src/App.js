@@ -35,7 +35,7 @@ function App() {
 
 
   React.useEffect( () => {
-    fetch(`http://egorkulik.com:8000/api/?${
+    fetch(`http://egorkulik.com/api/?${
       activeCollection ? `path=${activeCollection}` : ''
     }`)
     .then(res=> res.json())
@@ -47,14 +47,14 @@ function App() {
   
 
   React.useEffect(() => {
-    fetch(`http://egorkulik.com:8000/api/?path=Series`)
+    fetch(`http://egorkulik.com/api/?path=Series`)
     .then(res=> res.json())
     .then((json) => setCollectionsName(json))
     .catch((err) => {
 
       alert('Error takes data');
     });
-    fetch(`http://egorkulik.com:8000/api/?path=projects`)
+    fetch(`http://egorkulik.com/api/?path=projects`)
     .then(res=> res.json())
     .then((json) => setProjectsName(json))
     .catch((err) => {
