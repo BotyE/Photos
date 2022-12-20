@@ -7,7 +7,7 @@ import {Default} from './components/Default'
 import {Routes, Route, NavLink} from 'react-router-dom'
 function App() {
   let setLink = () => {
-      return window.location.href.replace('http://localhost:3000/','').replace('%20',' ')
+      return window.location.href.replace('http://egorkulik.com/','').replace('%20',' ')
   }
 
   const [activeCollection, setActiveCollection] = React.useState(`${setLink()==='forhire' || setLink()==='info' || setLink()==='' ? 'projects/Selected Works' : setLink()}`);
@@ -35,7 +35,7 @@ function App() {
 
 
   React.useEffect( () => {
-    fetch(`http://localhost:8000/api/?${
+    fetch(`http://egorkulik.com:8000/api/?${
       activeCollection ? `path=${activeCollection}` : ''
     }`)
     .then(res=> res.json())
@@ -47,14 +47,14 @@ function App() {
   
 
   React.useEffect(() => {
-    fetch(`http://localhost:8000/api/?path=Series`)
+    fetch(`http://egorkulik.com:8000/api/?path=Series`)
     .then(res=> res.json())
     .then((json) => setCollectionsName(json))
     .catch((err) => {
 
       alert('Error takes data');
     });
-    fetch(`http://localhost:8000/api/?path=projects`)
+    fetch(`http://egorkulik.com:8000/api/?path=projects`)
     .then(res=> res.json())
     .then((json) => setProjectsName(json))
     .catch((err) => {
