@@ -13,9 +13,9 @@ export const ForHire = () => {
             <p>Egors work is available for licensing. Alternatively he is available for commissioned work whether it be fine art landscape, architectural or portrait. For a free quote please contact fwork.kulik@gmail.com with a detailed project outline.</p>
         </div>
         <div className="images">
-            <img src={first}></img>
-            <img src={second}></img>
-            <img src={third}></img>
+            <img className="forhire_img" src={first}></img>
+            <img className="forhire_img" src={second}></img>
+            <img className="forhire_img" src={third}></img>
 
         </div>
         </div>

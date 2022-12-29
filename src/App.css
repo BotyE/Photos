@@ -51,14 +51,10 @@ ul {
   flex-direction: row;
 }
 .img_selected  {
-  width: 40%;
-  margin-bottom: 3vh;
-  user-select: none;
-}
-
-.water_mark {
-  background-color: red;
-  user-select: none;
+  box-sizing: content-box;
+  object-fit: contain;
+  height: 85vh;
+  margin-bottom: 20px;
 }
 
 .series__title {
@@ -72,6 +68,7 @@ ul {
 
 .section {
   margin-left: 50px;
+
 }
 .series {
   cursor: default;
@@ -139,7 +136,14 @@ ul {
 @media screen and (max-width: 1400px) {
 
   .img_selected  {
-      width: 65%;
+    height: 80vh;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+
+  .img_selected  {
+    height: 80vh;
   }
 }
 
@@ -158,7 +162,8 @@ ul {
     display: block;
   }
   .img_selected  {
-      width: 90%;
+    width: 80%;
+    height: auto;
   }
   .nav .title a{
     display: none;
